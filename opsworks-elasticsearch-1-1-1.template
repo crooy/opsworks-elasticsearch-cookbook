@@ -148,7 +148,7 @@
                 },
                 "CustomJson": {
                     "java": {
-                        "jdk_version": "7",
+                        "jdk_version": "8",
                         "oracle": {
                             "accept_oracle_download_terms": "true"
                         },
@@ -156,6 +156,7 @@
                         "install_flavor": "oracle"
                     },
                     "elasticsearch": {
+                        "version": "1.4.4",
                         "nginx": {
                             "users": [
                                 {
@@ -199,8 +200,12 @@
                         },
                         "cloud": {
                             "aws": {
-                                "region": "us-west-2"
+                                "region": "eu-west-1"
                             }
+                        },
+                         "plugins" : {
+                          "karmi/elasticsearch-paramedic" : {},
+                          "karmi/elasticsearch-head" : {}
                         },
                         "custom_config": {
                             "cluster.routing.allocation.awareness.attributes": "rack_id"
